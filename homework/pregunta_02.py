@@ -7,6 +7,20 @@ utilizar pandas, numpy o scipy.
 
 
 def pregunta_02():
+
+    lineas = open("files/input/data.csv", "r").readlines()
+
+    y = [z.replace('\n','') for z in lineas]
+    y = [z.split("\t")for z in lineas]
+
+    y = [x[0] for x in lineas[0:]]
+    from collections import Counter
+    x = sorted(list(Counter(y).items()))
+    return(x)
+
+#x = pregunta_02(lineas)
+#print(x)
+
     """
     Retorne la cantidad de registros por cada letra de la primera columna como
     la lista de tuplas (letra, cantidad), ordendas alfabéticamente.

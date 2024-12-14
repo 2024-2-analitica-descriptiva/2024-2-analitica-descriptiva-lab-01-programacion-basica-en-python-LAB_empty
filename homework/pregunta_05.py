@@ -7,6 +7,25 @@ utilizar pandas, numpy o scipy.
 
 
 def pregunta_05():
+    lineas = open("files/input/data.csv", "r").readlines()
+    lineas = [z.replace('\n','') for z in lineas]
+    lineas = [z.split("\t")for z in lineas]
+    numbers = [x[1] for x in lineas[0:]]
+    numbers = list(map(int, numbers))
+    letras = [x[0] for x in lineas[0:]]
+    lista_1 = list(zip(letras, numbers))
+
+    from collections import defaultdict
+    diccionario = defaultdict(list)
+
+    for clave, valor in lista_1:
+        diccionario[clave].append(valor)
+    
+    resultados = [(clave, max(valores), min(valores)) for clave, valores in diccionario.items()]
+    resultados = sorted(resultados)
+
+    return resultados
+
     """
     Retorne una lista de tuplas con el valor maximo y minimo de la columna 2
     por cada letra de la columa 1.
