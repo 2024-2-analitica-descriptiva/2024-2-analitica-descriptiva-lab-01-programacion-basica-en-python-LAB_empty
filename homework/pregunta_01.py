@@ -23,3 +23,4 @@ def pregunta_01():
 
 # Imprimir el resultado
 #print(x)
+#print(rta)
