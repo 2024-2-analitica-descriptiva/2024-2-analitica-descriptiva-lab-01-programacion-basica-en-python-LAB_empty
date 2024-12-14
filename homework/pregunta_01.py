@@ -6,7 +6,7 @@ utilizar pandas, numpy o scipy.
 """
 
 def pregunta_01():
-    lineas = open("/Users/maferojas/GitHub/Ana_descriptiva_RPOS/Laboratorios/Test/files/input/data.csv", "r").readlines()
+    lineas = open("files/input/data.csv", "r").readlines()
     # Limpiar saltos de línea y dividir por tabuladores
     file = [x.replace('\n', "") for x in lineas]  # Eliminar saltos de línea
     file = [x.split('\t') for x in lineas]  # Separar por tabulador

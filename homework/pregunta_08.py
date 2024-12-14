@@ -8,7 +8,7 @@ utilizar pandas, numpy o scipy.
 
 def pregunta_08():
    
-    file = open('files/input/data.csv', "r").readlines() #abro el archivo y lo leo linea por linea
+    file = open("files/input/data.csv", "r").readlines() #abro el archivo y lo leo linea por linea
     x = [z.replace('\n', '') for z in file] 
     x = [z.split('\t') for z in file] 
     letters = [z[0]for z in x]  

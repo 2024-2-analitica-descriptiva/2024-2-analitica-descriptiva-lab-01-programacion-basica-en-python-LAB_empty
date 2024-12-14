@@ -7,7 +7,7 @@ utilizar pandas, numpy o scipy.
 
 
 def pregunta_05():
-    lineas = open("/Users/maferojas/GitHub/Ana_descriptiva_RPOS/Laboratorios/Test/files/input/data.csv", "r").readlines()
+    lineas = open("files/input/data.csv", "r").readlines()
     lineas = [z.replace('\n','') for z in lineas]
     lineas = [z.split("\t")for z in lineas]
     numbers = [x[1] for x in lineas[0:]]

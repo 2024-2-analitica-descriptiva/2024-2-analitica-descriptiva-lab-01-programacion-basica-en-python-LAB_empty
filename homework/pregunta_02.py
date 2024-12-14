@@ -8,7 +8,7 @@ utilizar pandas, numpy o scipy.
 
 def pregunta_02():
 
-    lineas = open("/Users/maferojas/GitHub/Ana_descriptiva_RPOS/Laboratorios/Test/files/input/data.csv", "r").readlines()
+    lineas = open("files/input/data.csv", "r").readlines()
 
     y = [z.replace('\n','') for z in lineas]
     y = [z.split("\t")for z in lineas]
